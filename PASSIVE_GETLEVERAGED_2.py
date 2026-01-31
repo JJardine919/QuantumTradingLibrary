@@ -1,0 +1,90 @@
+import MetaTrader5 as mt5
+import time
+
+# --- CONFIG FOR GETLEVERAGED #2 ---
+SYMBOL = "BTCUSD"
+VOLUME = 0.01
+MAGIC = 7772  # Unique Magic
+TERMINAL_PATH = r"C:\Program Files\GetLeveraged MT5 Terminal\terminal64.exe"
+
+def log(msg):
+    print(f"GL_BOT_2 >> {msg}")
+    try:
+        with open("passive_gl_2.log", "a") as f:
+            f.write(f"{msg}\n")
+    except:
+        pass
+
+def main():
+    if not mt5.initialize(path=TERMINAL_PATH):
+        log(f"Failed to connect: {mt5.last_error()}")
+        return
+
+    acc = mt5.account_info()
+    if not acc:
+        log("Please log into GetLeveraged Account 2 manually.")
+        return
+    log(f"Trading on Account: {acc.login} (Magic {MAGIC})")
+
+    log("Strategy Active. Monitoring BTCUSD...")
+    while True:
+        if not mt5.terminal_info().connected:
+            time.sleep(5); continue
+        
+        tick = mt5.symbol_info_tick(SYMBOL)
+        if not tick: time.sleep(1); continue
+
+        rates = mt5.copy_rates_from_pos(SYMBOL, mt5.TIMEFRAME_M1, 0, 1)
+        if not rates: time.sleep(1); continue
+
+        current_open = rates[0]['open']
+        if tick.bid > current_open:
+            action = mt5.ORDER_TYPE_BUY; price = tick.ask; label = "BUY"
+        else:
+            action = mt5.ORDER_TYPE_SELL; price = tick.bid; label = "SELL"
+
+        pos = mt5.positions_get(symbol=SYMBOL)
+        if pos is None: pos = []
+        my_pos = [p for p in pos if p.magic == MAGIC]
+
+        if len(my_pos) == 0:
+            log(f"FIRE: {label} @ {price}")
+            
+            fill_mode = mt5.ORDER_FILLING_IOC 
+            s_info = mt5.symbol_info(SYMBOL)
+            if s_info and not (s_info.filling_mode & mt5.SYMBOL_FILLING_IOC): 
+                fill_mode = mt5.ORDER_FILLING_FOK
+            
+            sl_points = 5000; tp_points = 15000
+            point = s_info.point
+            sl = price - (sl_points * point) if action == mt5.ORDER_TYPE_BUY else price + (sl_points * point)
+            tp = price + (tp_points * point) if action == mt5.ORDER_TYPE_BUY else price - (tp_points * point)
+
+            request = {
+                "action": mt5.TRADE_ACTION_DEAL,
+                "symbol": SYMBOL,
+                "volume": VOLUME,
+                "type": action,
+                "price": price,
+                "sl": sl,
+                "tp": tp,
+                "magic": MAGIC,
+                "comment": "KAMIKAZE_P_2",
+                "type_time": mt5.ORDER_TIME_GTC,
+                "type_filling": fill_mode,
+                "deviation": 50,
+            }
+            
+            res = mt5.order_send(request)
+            if res.retcode != mt5.TRADE_RETCODE_DONE:
+                log(f"ERROR: {res.comment}")
+            else:
+                log(f"SUCCESS: {label} Opened.")
+        
+        time.sleep(1)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        pass

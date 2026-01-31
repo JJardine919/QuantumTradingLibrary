@@ -1,0 +1,58 @@
+{
+  "accounts": [
+    {
+      "name": "BG_INSTANT_1",
+      "account_id": "PLACEHOLDER_1",
+      "password": "PLACEHOLDER_PWD_1",
+      "server": "BlueGuardian-Server",
+      "type": "instant_challenge",
+      "magic_number": 100001,
+      "symbol": "BTCUSD",
+      "max_lot_size": 0.5,
+      "daily_drawdown_pct": 4.0,
+      "max_drawdown_pct": 8.0,
+      "profit_target_pct": 8.0,
+      "enabled": true
+    },
+    {
+      "name": "BG_INSTANT_2",
+      "account_id": "PLACEHOLDER_2",
+      "password": "PLACEHOLDER_PWD_2",
+      "server": "BlueGuardian-Server",
+      "type": "instant_challenge",
+      "magic_number": 100002,
+      "symbol": "BTCUSD",
+      "max_lot_size": 0.5,
+      "daily_drawdown_pct": 4.0,
+      "max_drawdown_pct": 8.0,
+      "profit_target_pct": 8.0,
+      "enabled": true
+    },
+    {
+      "name": "BG_COMPETITION",
+      "account_id": "PLACEHOLDER_3",
+      "password": "PLACEHOLDER_PWD_3",
+      "server": "BlueGuardian-Server",
+      "type": "competition",
+      "magic_number": 100003,
+      "symbol": "BTCUSD",
+      "max_lot_size": 1.0,
+      "daily_drawdown_pct": 5.0,
+      "max_drawdown_pct": 10.0,
+      "profit_target_pct": 10.0,
+      "enabled": true
+    }
+  ],
+  "vps": {
+    "host": "NAMECHEAP_VPS_IP",
+    "user": "root",
+    "password": "NAMECHEAP_VPS_PASSWORD",
+    "remote_base": "/opt/blueguardian"
+  },
+  "trading": {
+    "risk_mode": "conservative",
+    "min_confidence": 0.65,
+    "max_trades_per_day": 3,
+    "check_interval_seconds": 10
+  }
+}
