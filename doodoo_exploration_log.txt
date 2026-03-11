@@ -1,0 +1,100 @@
+============================================================
+DooDoo Market Exploration Log — 2026-03-05 21:31:37
+============================================================
+
+24D State Vector (real market features):
+  [ 0] BTCUSD_ret           = -0.5143
+  [ 1] BTCUSD_vol           = +0.5654
+  [ 2] BTCUSD_trend         = -1.3208
+  [ 3] BTCUSD_volmom        = -0.2006
+  [ 4] EURUSD_ret           = -0.3070
+  [ 5] EURUSD_vol           = +0.6319
+  [ 6] EURUSD_trend         = +3.2529
+  [ 7] EURUSD_volmom        = -0.6091
+  [ 8] XAUUSD_ret           = +0.2744
+  [ 9] XAUUSD_vol           = +0.5231
+  [10] XAUUSD_trend         = +3.1173
+  [11] XAUUSD_volmom        = -0.5054
+  [12] GBPUSD_ret           = -0.3798
+  [13] GBPUSD_vol           = +0.5929
+  [14] GBPUSD_trend         = +2.7053
+  [15] GBPUSD_volmom        = -0.4998
+  [16] USDJPY_ret           = +0.3299
+  [17] USDJPY_vol           = +0.4808
+  [18] USDJPY_trend         = -0.5277
+  [19] USDJPY_volmom        = -0.3100
+  [20] US30_ret             = +0.0000
+  [21] US30_vol             = +0.6496
+  [22] US30_trend           = +2.8612
+  [23] US30_volmom          = -0.6986
+
+  State norm: 6.4817
+
+--- COLLAPSE OUTPUT ---
+  Chaos (raw):        38.517471
+  Chaos (normalized): 7.70/10
+  Intent magnitude:   0.7532
+  Control vec:        [1.8157, -0.5401, 2.0244]
+  Control norm:       2.7725
+  TTS Prompt:         Speak as DooDoo, an excited chaotic artificial organism who's wildly enthusiastic and erratic about focused on negative intent (0.75 clarity).
+
+  Personality embedding (8D):
+    e0: +  0.0000  
+    e1: -  7.1994  ########################################
+    e2: + 16.9381  ########################################
+    e3: +  1.5633  ###############
+    e4: -  9.2254  ########################################
+    e5: - 10.0333  ########################################
+    e6: - 22.5425  ########################################
+    e7: + 21.1773  ########################################
+
+--- PER-SYMBOL COLLAPSE (which markets feel chaotic?) ---
+  BTCUSD    chaos=0.00/10  intent=0.0000  |  Speak as DooDoo, an excited chaotic artificial organism who's calm and thoughtful about exploring freely.
+  EURUSD    chaos=0.00/10  intent=0.0000  |  Speak as DooDoo, an excited chaotic artificial organism who's calm and thoughtful about exploring freely.
+  XAUUSD    chaos=0.00/10  intent=0.0000  |  Speak as DooDoo, an excited chaotic artificial organism who's calm and thoughtful about exploring freely.
+  GBPUSD    chaos=0.00/10  intent=0.0000  |  Speak as DooDoo, an excited chaotic artificial organism who's calm and thoughtful about exploring freely.
+  USDJPY    chaos=0.00/10  intent=0.0000  |  Speak as DooDoo, an excited chaotic artificial organism who's calm and thoughtful about exploring freely.
+  US30      chaos=0.00/10  intent=0.0000  |  Speak as DooDoo, an excited chaotic artificial organism who's calm and thoughtful about exploring freely.
+
+--- CROSS-PAIR INTERACTIONS (which pairs amplify chaos?) ---
+  BTCUSD   x XAUUSD    chaos=1.03/10  (raw=5.1365)
+  BTCUSD   x GBPUSD    chaos=0.77/10  (raw=3.8492)
+  EURUSD   x GBPUSD    chaos=0.27/10  (raw=1.3260)
+  EURUSD   x XAUUSD    chaos=0.13/10  (raw=0.6345)
+  BTCUSD   x EURUSD    chaos=0.00/10  (raw=0.0000)
+  ...
+  GBPUSD   x USDJPY    chaos=0.00/10  (raw=0.0000)
+  GBPUSD   x US30      chaos=0.00/10  (raw=0.0000)
+  USDJPY   x US30      chaos=0.00/10  (raw=0.0000)
+
+--- OBSERVATIONS ---
+  Most chaotic pair:  BTCUSD x XAUUSD (chaos 1.03/10)
+  Calmest pair:       USDJPY x US30 (chaos 0.00/10)
+  Highest individual chaos: BTCUSD (0.0000)
+  Lowest individual chaos:  US30 (0.0000)
+
+============================================================
+Deep Dive: BTC x GOLD — 2026-03-05 21:32:20
+Chaos range: 0.18 — 10.00
+Mean chaos: 5.51
+BTC-Gold correlation: -0.072 (mean -0.029)
+High-chaos moments: 18
+  Bar 40: chaos=7.16
+  Bar 45: chaos=10.00
+  Bar 50: chaos=10.00
+  Bar 55: chaos=7.97
+  Bar 65: chaos=6.80
+  Bar 80: chaos=8.42
+  Bar 95: chaos=10.00
+  Bar 100: chaos=10.00
+  Bar 105: chaos=10.00
+  Bar 110: chaos=6.20
+  Bar 125: chaos=10.00
+  Bar 135: chaos=10.00
+  Bar 140: chaos=10.00
+  Bar 145: chaos=8.99
+  Bar 150: chaos=10.00
+  Bar 155: chaos=9.13
+  Bar 170: chaos=10.00
+  Bar 185: chaos=10.00
+============================================================

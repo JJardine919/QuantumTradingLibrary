@@ -1,0 +1,620 @@
+{
+  "engine": "J-TEAR",
+  "version": "1.0",
+  "timestamp": "2026-03-10T15:51:03.385078+00:00",
+  "last_completed_window": 0,
+  "config": {
+    "timeframe": "M1",
+    "train_days": 4,
+    "test_days": 2,
+    "step_days": 2,
+    "lookback_months": 12,
+    "active_roster_size": 10,
+    "minor_league_size": 15,
+    "max_minor_league_size": 25,
+    "offspring_per_cycle": 3,
+    "mutation_rate": 0.1,
+    "radiation_rate": 0.3,
+    "min_trades_threshold": 3,
+    "ensemble_confidence_threshold": 0.6,
+    "relegation_buffer_windows": 3,
+    "signal_stride": 3,
+    "signal_timeout": 2.0,
+    "expert_timeout": 60.0,
+    "skip_bars": 100,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "XAUUSDT"
+    ],
+    "scoring_weights": {
+      "profit_factor": 0.3,
+      "win_rate": 0.25,
+      "sharpe": 0.2,
+      "max_drawdown": 0.15,
+      "consistency": 0.1
+    },
+    "breeding_probabilities": {
+      "MUTATION": 0.3,
+      "CROSSOVER_SAME": 0.2,
+      "RADIATION": 0.15,
+      "BLEND": 0.1,
+      "ELITE_CLONE": 0.1,
+      "GENESIS": 0.1,
+      "CROSSOVER_DIFF": 0.05
+    },
+    "qt_library": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers",
+    "spare_champions": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+    "data_dir": "C:\\Users\\jimjj\\Downloads\\binance_70mo\\data",
+    "qtl_dir": "C:\\Users\\jimjj\\Music\\QuantumChildren\\QuantumTradingLibrary",
+    "workspace": "C:\\Users\\jimjj\\Music\\QuantumChildren\\QuantumTradingLibrary\\jtear_workspace",
+    "state_file": "C:\\Users\\jimjj\\Music\\QuantumChildren\\QuantumTradingLibrary\\jtear_state.json"
+  },
+  "roster": {
+    "army_champion_09_ETHUSD_CROSSOVER": {
+      "name": "army_champion_09_ETHUSD_CROSSOVER",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_09_ETHUSD_CROSSOVER.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "CROSSOVER"
+    },
+    "army_champion_10_BTCUSD_GENESIS": {
+      "name": "army_champion_10_BTCUSD_GENESIS",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_10_BTCUSD_GENESIS.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "GENESIS"
+    },
+    "army_champion_11_XAUUSD_CROSSOVER": {
+      "name": "army_champion_11_XAUUSD_CROSSOVER",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_11_XAUUSD_CROSSOVER.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "CROSSOVER"
+    },
+    "army_champion_12_BTCUSD_MUTATION": {
+      "name": "army_champion_12_BTCUSD_MUTATION",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_12_BTCUSD_MUTATION.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "MUTATION"
+    },
+    "army_champion_13_XAUUSD_GENESIS": {
+      "name": "army_champion_13_XAUUSD_GENESIS",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_13_XAUUSD_GENESIS.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "GENESIS"
+    },
+    "army_champion_14_XAUUSD_CROSSOVER": {
+      "name": "army_champion_14_XAUUSD_CROSSOVER",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_14_XAUUSD_CROSSOVER.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "CROSSOVER"
+    },
+    "army_champion_15_BTCUSD_RADIATION": {
+      "name": "army_champion_15_BTCUSD_RADIATION",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_15_BTCUSD_RADIATION.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "RADIATION"
+    },
+    "army_champion_16_XAUUSD_CROSSOVER": {
+      "name": "army_champion_16_XAUUSD_CROSSOVER",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_16_XAUUSD_CROSSOVER.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "CROSSOVER"
+    },
+    "army_champion_17_XAUUSD_MUTATION": {
+      "name": "army_champion_17_XAUUSD_MUTATION",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_17_XAUUSD_MUTATION.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "MUTATION"
+    },
+    "army_champion_18_BTCUSD_CROSSOVER": {
+      "name": "army_champion_18_BTCUSD_CROSSOVER",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions\\army_champion_18_BTCUSD_CROSSOVER.pth",
+      "tier": "active",
+      "vote_weight": 0.1,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "CROSSOVER"
+    },
+    "PY_ETAREExpert": {
+      "name": "PY_ETAREExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_03_etare",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_TEQAExpert": {
+      "name": "PY_TEQAExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_04_teqa",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_VDJExpert": {
+      "name": "PY_VDJExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_05_vdj",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_TEDomesticationExpert": {
+      "name": "PY_TEDomesticationExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_06_te_domestication",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_CRISPRCasExpert": {
+      "name": "PY_CRISPRCasExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_07_crispr",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_ElectricOrgansExpert": {
+      "name": "PY_ElectricOrgansExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_08_electric_organs",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_ProtectiveDeletionExpert": {
+      "name": "PY_ProtectiveDeletionExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_09_protective_deletion",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_ToxoplasmaExpert": {
+      "name": "PY_ToxoplasmaExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_10_toxoplasma",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_BdelloidExpert": {
+      "name": "PY_BdelloidExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_11_bdelloid",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_SyncytinExpert": {
+      "name": "PY_SyncytinExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_12_syncytin",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_KorvExpert": {
+      "name": "PY_KorvExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_13_korv",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_CancerCellExpert": {
+      "name": "PY_CancerCellExpert",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_14_cancer_cell",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert15QNIF": {
+      "name": "PY_Expert15QNIF",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_15_qnif",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert16HGH": {
+      "name": "PY_Expert16HGH",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_16_hgh",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert17Stanozolol": {
+      "name": "PY_Expert17Stanozolol",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_17_stanozolol",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert18Testosterone": {
+      "name": "PY_Expert18Testosterone",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_18_testosterone",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert19MushroomRabies": {
+      "name": "PY_Expert19MushroomRabies",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_19_mushroom_rabies",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert20BlueGuardianQuantum": {
+      "name": "PY_Expert20BlueGuardianQuantum",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_20_blueguardian_quantum",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert21BlueGuardianElite": {
+      "name": "PY_Expert21BlueGuardianElite",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_21_blueguardian_elite",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert22BlueGuardianDynamic": {
+      "name": "PY_Expert22BlueGuardianDynamic",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_22_blueguardian_dynamic",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert23Nociception": {
+      "name": "PY_Expert23Nociception",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_23_nociception",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "PY_Expert24QuantumTeenager": {
+      "name": "PY_Expert24QuantumTeenager",
+      "architecture": "QuantumChildren",
+      "expert_type": "python_expert",
+      "source_path": "expert_24_quantum_teenager",
+      "weight_path": null,
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [
+        0.0
+      ],
+      "consecutive_underperform": 0,
+      "lineage": [],
+      "breeding_op": "ORIGINAL"
+    },
+    "army_champion_w0_BLEND_1": {
+      "name": "army_champion_w0_BLEND_1",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\Music\\QuantumChildren\\QuantumTradingLibrary\\jtear_workspace\\offspring\\army_champion_w0_BLEND_1.pth",
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [],
+      "consecutive_underperform": 0,
+      "lineage": [
+        "army_champion_09_ETHUSD_CROSSOVER",
+        "army_champion_10_BTCUSD_GENESIS",
+        "army_champion_11_XAUUSD_CROSSOVER",
+        "army_champion_12_BTCUSD_MUTATION",
+        "army_champion_13_XAUUSD_GENESIS"
+      ],
+      "breeding_op": "BLEND"
+    },
+    "json_M5_w0_ELITE_CLONE_2": {
+      "name": "json_M5_w0_ELITE_CLONE_2",
+      "architecture": "json_M5",
+      "expert_type": "json_weights",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\Music\\QuantumChildren\\QuantumTradingLibrary\\jtear_workspace\\offspring\\json_M5_w0_ELITE_CLONE_2.json",
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [],
+      "consecutive_underperform": 0,
+      "lineage": [
+        "expert_BTCUSD_M5_c10_11"
+      ],
+      "breeding_op": "ELITE_CLONE"
+    },
+    "army_champion_w0_CROSSOVER_SAME_3": {
+      "name": "army_champion_w0_CROSSOVER_SAME_3",
+      "architecture": "army_champion",
+      "expert_type": "pth_army",
+      "source_path": "C:\\Users\\jimjj\\OneDrive\\Videos\\Quantum-Teenagers\\spare champions",
+      "weight_path": "C:\\Users\\jimjj\\Music\\QuantumChildren\\QuantumTradingLibrary\\jtear_workspace\\offspring\\army_champion_w0_CROSSOVER_SAME_3.pth",
+      "tier": "minor",
+      "vote_weight": 0.0,
+      "composite_score": 0.0,
+      "score_history": [],
+      "consecutive_underperform": 0,
+      "lineage": [
+        "army_champion_10_BTCUSD_GENESIS",
+        "army_champion_19_BTCUSD_CROSSOVER"
+      ],
+      "breeding_op": "CROSSOVER_SAME"
+    }
+  }
+}
