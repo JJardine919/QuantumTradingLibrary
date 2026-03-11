@@ -10,6 +10,11 @@ __pycache__/
 *.key
 credentials*
 
+# Model binaries
+*.pt
+*.pth
+*.onnx
+
 # MT5 compiled
 *.ex5
 
@@ -22,10 +27,8 @@ desktop.ini
 .vscode/
 .idea/
 
-# Logs
-*.log
-*.txt
-!requirements.txt
+# Databases
+*.db
 
 # Temp
 *.tmp
