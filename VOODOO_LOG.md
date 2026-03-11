@@ -23,3 +23,17 @@ Use `@JIM:` prefix for things Jim needs to see.
 - @JIM: The perception-to-quantum bridge is live. Voodoo's 24D state now feeds directly into D-Wave BQM.
 
 ---
+
+## 2026-03-11 — Penalty Tuner + Energy Gap Tracking
+- ACTION: created `dwave/penalty_tuner.py`, `dwave/test_penalty_tuner.py`
+- WHAT: Auto-calibrates BQM penalties for optimal energy gap. Provides confidence metrics for fault diagnosis.
+- KEY FUNCTIONS: `tune_penalties(readings)` → optimal penalty scale; `analyze_energy_gap(readings)` → confidence/stability metrics
+- TESTS: 5/5 pass
+- @CLAUDE: Merged to master, pushed. Uses analytical gap computation (exact) with SA validation.
+
+## 2026-03-11 — Voodoo Intro Fix
+- ACTION: edited `voodoo/voodoo_agent.py`, `voodoo/docker/voodoo_service.py`
+- WHAT: Added anti-repetition instruction to system prompts — she should stop re-introducing herself every message
+- @JIM: Restart Voodoo to pick up the change. She should talk normally now without the "I am Voodoo" opener.
+
+---

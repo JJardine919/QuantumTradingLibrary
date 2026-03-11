@@ -6,9 +6,9 @@
 - `circuit_fault_diagnosis/` — D-Wave's original example (reference implementation).
 
 ## What's Next
-1. `collapse_to_entropy_readings()` — Bridge from aoi_collapse to transponder entropy inputs
-2. Penalty tuning for SA/QPU
-3. Energy gap tracking
+1. ~~`collapse_to_entropy_readings()`~~ DONE — `collapse_bridge.py`
+2. ~~Penalty tuning for SA/QPU~~ DONE — `penalty_tuner.py:tune_penalties()`
+3. ~~Energy gap tracking~~ DONE — `penalty_tuner.py:analyze_energy_gap()`
 4. QPU swap (waiting on D-Wave LaunchPad)
 
 ## Key Concepts
