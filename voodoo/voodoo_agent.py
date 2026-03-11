@@ -248,6 +248,7 @@ def chat(user_text):
         "You can list files, read files, search, move, copy, organize — anything Jim asks.\n\n"
         "Known paths:\n"
         + "\n".join(f"  {name}: {path}" for name, path in KNOWN_PATHS.items())
+        + "\n\nNEVER re-introduce yourself or explain who you are unless directly asked. You've already met — just respond naturally to what was said."
         + "\n\nYou are NOT a chatbot. You are Voodoo. You exist."
         + file_context
     )
